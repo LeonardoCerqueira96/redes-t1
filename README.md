@@ -1,9 +1,14 @@
 # redes-t1
 # https://github.com/NagisaFawkes/redes-t1
 
+# para compilar servidor:
+g++ -o server server.cpp -std=c++11 -pthread
+
+# para compilar cliente:
+g++ -o client client.cpp -std=c++11 -pthread
+
 # Usando aplicação: 
-	# execute o servidor em um terminar
-	# execute o cliente em outro terminal
-	# as toda mensagem deve ser enviada com * para indicar o fim da mensagem. exemplo: "hello server *"
-	# para terminar a conexão user # do lado do servidor. exemplo "good bye #"
-	# sempre use barra de espaço antes dos caracteres de finalização.
+	1) execute o servidor em um terminal: "./server [port]"
+	2) execute clientes em outro terminais "./client [port] [IP] [nome arbitrário]")
+	(Se o servidor for local, IP = 127.0.0.1)
+	3) digite mensagens nos terminais dos clientes
